@@ -20,7 +20,7 @@ export default function Home() {
 				{/* slideshow/carousel */}
 				<div className="carousel-inner">
 					<div className="carousel-item active">
-						<img src="/img/ph1.jpg" alt="Los Angeles" className="d-block" />
+						<img src="/img/banner-1.jpg" alt="Los Angeles" className="d-block" />
 					</div>
 					<div className="carousel-item">
 						<img src="/img/ph2.jpg" alt="Chicago" className="d-block" />
