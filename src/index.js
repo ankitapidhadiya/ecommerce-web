@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './style/main.css';
 import './style/header.css';
+import './style/productlist.css';
 import './style/home.css';
+import './style/customhtml1.css';
+//import 'bootstrap/dist/css/bootstrap.css';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';

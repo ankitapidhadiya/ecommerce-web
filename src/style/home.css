@@ -3,3 +3,50 @@
     padding: 0;
     background-color: #ffffff;
 }
+#slider .carousel-indicators{
+    margin: auto;
+    width: fit-content;
+
+}
+.home-page .carousel-indicators [data-bs-target]{
+  width: 10px;
+  height: 10px;
+  background-color:#f74040;
+}
+.banner-des-inner{   
+    position: absolute;
+    bottom: 50%;
+    left: auto;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    flex-direction: column;
+    transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+}
+.promo-text{
+    font-size: 20px;
+    color: #f74040;
+    line-height: 20px;
+    margin: 0 0 10px 0;
+}
+h1.promo-title{
+    color: #222222;
+    font-size: 50px;
+    margin:0 0 26px 0;
+}
+.promo-btn{
+    width: fit-content;
+    background: #f74040;
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.promo-btn:hover{
+    color: #222222;
+    background: #f7f7f7;
+}

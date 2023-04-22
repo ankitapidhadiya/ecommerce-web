@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Switch,
@@ -56,6 +57,7 @@ function App(props) {
           <Route path="/formal" render={props => (<Formal {...props} />)} />
           <Route path="*" component={NotFound} /> */}
           <AppRoute exact path="/" layout={WebLayout} component={Home} />
+          <AppRoute exact path="/shop" layout={WebLayout} component={Shop} />
         </Switch>
       </div>
     </Router>
