@@ -5,6 +5,7 @@ import './style/header.css';
 import './style/productlist.css';
 import './style/home.css';
 import './style/customhtml1.css';
+import './style/listcategory.css';
 //import 'bootstrap/dist/css/bootstrap.css';
 
 import App from './App';

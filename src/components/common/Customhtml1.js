@@ -13,9 +13,11 @@ const Customhtml1 = (props) =>{
                         <a href="#">
                             <img src="/img/banner-3.jpg" alt="banner1" />
                         </a>
-                        <div className="promo-banner-desc">
-                            <div className="promo-title">
-                                Women's Collection
+                        <div className="promo-text-wrapper">
+                            <div className="promo-text-inner">
+                              {/* <div className="promo-sale">Hot List</div>  */}
+                              <h1 className="promo-title">Women <span>Collection</span></h1> 
+                              <a href="#" className="promo-btn btn btn-primary">Shop Now</a>
                             </div>
                         </div>
                     </div>
@@ -27,7 +29,7 @@ const Customhtml1 = (props) =>{
                         </a>
                         <div className="promo-text-wrapper">
                             <div className="promo-text-inner">
-                              <div className="promo-sale">Hot List</div> 
+                              {/* <div className="promo-sale">Hot List</div>  */}
                               <h1 className="promo-title">Men <span>Collection</span></h1> 
                               <a href="#" className="promo-btn btn btn-primary">Shop Now</a>
                             </div>

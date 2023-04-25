@@ -1,5 +1,6 @@
 import Customhtml1 from '../components/common/Customhtml1';
 import ProductList from '../components/common/ProductList';
+import ListCategory from '../components/ListCategory';
 export default function Home() {
 
 	const handleLogout = (props) => {
@@ -60,7 +61,9 @@ export default function Home() {
 				<button className="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
 					<span className="carousel-control-next-icon"></span>
 	</button>*/}
-			</div><ProductList/>
+			</div>
+			<ListCategory/>
+			<ProductList/>
 			<Customhtml1/>
 			
 		</div>

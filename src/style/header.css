@@ -161,6 +161,12 @@ li a {
     color:#222222;
     font-weight: 500;
   }
+  .main-header ul li:hover .dropdown-item.pointer{
+    color: #f74040;
+  }
+  .top-menu li a:hover{
+   color: #f74040;
+  }
   #header .menu  ul[data-depth="0"]>li+li{
     margin: 0 0 0 15px;
   }

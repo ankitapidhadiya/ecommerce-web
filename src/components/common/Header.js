@@ -51,12 +51,12 @@ const Header = (props) => {
                                     <div className="menu" id="desktop_top_menu">
                                         <ul className="top-menu clearfix" id="top-menu" data-depth="0">
                                             <li>
-                                                <Link to={'/'} className="dropdown-item pointer">
+                                                <Link to={'/'} className="dropdown-item pointer" id="menu">
                                                 Home
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to={'/shop'} className=" dropdown-item pointer"  data-bs-toggle="collapse" data-depth="0">
+                                                <Link to={'/shop'} className=" dropdown-item pointer"id="menu"  data-bs-toggle="collapse" data-depth="0">
                                                     Shop
                                                 </Link>
                                                     <div className="popover collapse  sub-menu" id="top-sub-menu">
@@ -93,8 +93,8 @@ const Header = (props) => {
                                                     </div>
                                                 
                                             </li>
-                                            <li><a className="dropdown-item pointer" href="#clothes">Clothes</a></li>
-                                            <li><a className="dropdown-item pointer" href="#formal">Formal</a></li>
+                                            <li><a className="dropdown-item pointer" id="menu" href="#clothes">Clothes</a></li>
+                                            <li><a className="dropdown-item pointer" id="menu" href="#formal">Formal</a></li>
                                         </ul>
                                     </div>
                         </div>

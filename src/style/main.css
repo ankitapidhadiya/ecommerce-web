@@ -11,6 +11,19 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
 }
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #222222;
+}
+a:hover {
+  color: #222222;
+  text-decoration: none;
+}
+a:focus, a:hover {
+  color: #222222;
+  text-decoration: none;
+}
 input:focus { outline: none; }
 
 /*Common*/
@@ -283,6 +296,10 @@ img{
 }
 .featured-product .products:hover .owl-nav{
   opacity: 1;
+}
+.owl-carousel.owl-theme .owl-nav button.owl-prev:hover,
+.owl-carousel.owl-theme .owl-nav button.owl-next:hover{
+  background: #222222;
 }
 .login-page, .signup-page, .ht-page { width: 300px; margin: auto; }
 .login-page input, .signup-page input, .ht-page select { width: 100%; }
