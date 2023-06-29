@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,7 +9,9 @@ import {
 
 import Login from './pages/auth/Login'
 import Home from './pages/Home'
-import About from './pages/About'
+import Shop from './pages/Shop'
+import Clothes from './pages/Clothes'
+import Formal from './pages/Formal'
 import Signup from './pages/auth/Signup'
 import NotFound from './pages/NotFound'
 import WebLayout from './WebLayout'
@@ -45,11 +48,16 @@ function App(props) {
           {/* <Route path="/login" render={props => (<Login {...props} />)} />
           <Route path="/sign-up" render={props => (<Signup {...props} />)} />
           <PrivateRoute exact path="/home" component={Home} />
-          <PrivateRoute exact path="/about" component={About} /> */}
+          <PrivateRoute exact path="/shop" component={Shop} />
+          <PrivateRoute exact path="/clothes" component={Clothes} />
+          <PrivateRoute exact path="/formal" component={Formal} /> */}
           {/* <Route path="/" render={props => (<Home {...props} />)} />
-          <Route path="/about" render={props => (<About {...props} />)} />
+          <Route path="/shop" render={props => (<Shop {...props} />)} />
+          <Route path="/clothes" render={props => (<Clothes {...props} />)} />
+          <Route path="/formal" render={props => (<Formal {...props} />)} />
           <Route path="*" component={NotFound} /> */}
           <AppRoute exact path="/" layout={WebLayout} component={Home} />
+          <AppRoute exact path="/shop" layout={WebLayout} component={Shop} />
         </Switch>
       </div>
     </Router>

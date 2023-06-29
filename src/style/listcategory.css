@@ -1,0 +1,42 @@
+.list-category .owl-carousel .owl-item img{
+    max-height:377px;
+    height: 377px;
+  }
+.category-desc{ 
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+  }
+.category-desc .cat-title a{
+    margin: 0;
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 20px 10px;
+    font-weight: 500;
+    width: 180px;
+    color: #222222;
+    background: #ffffff;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+.category-layout:hover .category-desc{
+    transform: translateY(-20px);
+}
+.cat-title a:hover{
+background: #f74040;
+color: #ffffff;
+}
