@@ -11,7 +11,7 @@ const Header = (props) => {
                     <div className="row">
                         <div className='header-top-inner'>
                         <div className="header-top-left col-lg-4 col-xs-12">
-                            <div className="dropdown" id="#Currencyselector">
+                            <div className="dropdown" id="Currencyselector">
                                 <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
                                 Currency :USD<i className="fa fa-angle-down">
                                 </i>
@@ -24,7 +24,7 @@ const Header = (props) => {
                         </div>
                         <div className="header-top-center col-lg-4 col-xs-12"><span>Free Shipping For Order Over $150!</span></div>
                         <div className="header-top-right col-lg-4 col-xs-12">
-                            <div className="dropdown" id="#Myaccount">
+                            <div className="dropdown" id="Myaccount">
                                 <button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
                                     <span><i className="fa fa-user-circle"></i></span> My Account<i className="fa fa-angle-down"></i>
                                     </button>
@@ -56,7 +56,7 @@ const Header = (props) => {
                                                 </Link>
                                             </li>
                                             <li>
-                                                <Link to={'/shop'} className=" dropdown-item pointer"id="menu"  data-bs-toggle="collapse" data-depth="0">
+                                                <Link to={'/shop'} className=" dropdown-item pointer"id="menu" >
                                                     Shop
                                                 </Link>
                                                     <div className="popover collapse  sub-menu" id="top-sub-menu">
@@ -93,8 +93,8 @@ const Header = (props) => {
                                                     </div>
                                                 
                                             </li>
-                                            <li><a className="dropdown-item pointer" id="menu" href="#clothes">Clothes</a></li>
-                                            <li><a className="dropdown-item pointer" id="menu" href="#formal">Formal</a></li>
+                                            <li><a className="dropdown-item pointer" id="menu" href="clothes">Clothes</a></li>
+                                            <li><a className="dropdown-item pointer" id="menu" href="formal">Formal</a></li>
                                         </ul>
                                     </div>
                         </div>

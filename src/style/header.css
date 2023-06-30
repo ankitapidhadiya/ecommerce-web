@@ -115,7 +115,7 @@ li a {
     right: auto;
     background-color: #fff;
     border: none;
-    border-top: 2px solid #ff4040;
+    border-top: 2px solid #f74040;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.11);
     -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.11);
     -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.11);
@@ -258,4 +258,7 @@ li a {
     background:#f74040;
     border-radius: 50%;
   }
-
+  .btn:first-child:active,  .btn.show {
+    background: none;
+    color: #f74040;
+  }

@@ -1,0 +1,35 @@
+.promo-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.promo-img img{
+    width: 50px;
+    position: relative;
+    display: inline-block;
+    background: transparent;
+    color: aliceblue;
+    transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+}
+.promo-item:hover .promo-detail .promo-img img{
+    transform: rotateY(180deg);
+}
+.promo-box .promo-info{
+    text-align: left;
+    margin-left: 20px;
+}
+.promo-info .promo-title{
+    color: #222222;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+.promo-info .promo-desc{
+    color: #777777;
+    font-size: 14px;
+}
