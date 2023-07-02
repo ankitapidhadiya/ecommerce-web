@@ -1,0 +1,127 @@
+.footer-title{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.footer-top-inner{
+    padding: 0 0 50px;
+}
+.links .collapse, .block-social .collapse{
+    display: inherit;
+}
+.footer-top-inner .contact-info li span{
+    color: #222222;
+    padding-right: 5px;
+    font-weight: 500;
+}
+.footer-sub-menu ul{
+    display: block;
+    text-align: left;
+}
+.footer-sub-menu ul li a{
+    display: inline-block;
+}
+.footer-top-inner .contact-info ul:not(.social-block) li{
+    color: #777777;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 24px;
+}
+.footer-sub-menu ul:not(.social-block) li a{
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+.footer-bottom{
+    border-top: 4px double rgba(136, 136, 136, 0.15);
+}
+.footer-bottom-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+p.copyright{
+    margin: 0;
+}
+p.copyright a{
+    color: #222222;
+    font-size: 14px;
+}
+p.copyright a:hover{
+    color: #f74040;
+}
+/*social block*/
+.social-block{
+    margin-top: 15px;
+}
+.footer_social li a{
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    line-height: 34px;
+    border-radius: 50%;
+}
+.footer_social li a i{
+    color: #ffffff;
+}
+.footer_social{
+    display: flex;
+    align-items: center;
+
+}
+.footer_social li+li{
+    margin-left: 5px;
+}
+/*newsletter subsription*/
+.newsletter_description{
+    font-size: 16px;
+    color: #777777;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+  .facebook a:before {
+    content: "\F09A"; }
+  
+  .twitter a:before {
+    content: "\F099"; }
+  
+  .rss a:before {
+    content: "\F09E"; }
+  
+  .youtube a:before {
+    content: "\F167"; }
+  
+  .googleplus a:before {
+    content: "\F0D5"; }
+  
+  .instagram a:before {
+    content: "\F16D"; }
+  
+  .social-block li a.facebook {
+    background: #3b5998; }
+  
+  .social-block li a.twitter {
+    background: #00acee; }
+  
+  .social-block li a.google-plus {
+    background: #dd5144; }
+  
+  .social-block li a.instagram {
+    background: #0e76a8; }
+  
+  .social-block li a.youtube {
+    background: #c4302b; }
+  
+.footer_newsletter_form input[type=email]{
+    width: 100%;
+    min-height: 40px;
+}
+.newsletter_form_inner button{
+    margin: 10px 0 0;
+}

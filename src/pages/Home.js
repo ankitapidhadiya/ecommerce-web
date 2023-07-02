@@ -1,6 +1,10 @@
 import Customhtml1 from '../components/common/Customhtml1';
 import ProductList from '../components/common/ProductList';
 import ListCategory from '../components/ListCategory';
+import PromoBlock from '../components/PromoBlock';
+import SpecialProduct from '../components/SpecialProduct';
+import Testimonials  from '../components/Testimonials'; 
+import Footer from '../components/common/Footer';	 	  
 export default function Home() {
 
 	const handleLogout = (props) => {
@@ -15,10 +19,10 @@ export default function Home() {
 				
 
 				{/* slideshow/carousel */}
-				<div className="carousel-inner">
+				<div className="carousel-inner" autoPlay={true}>
 					<div className="carousel-item active">
 						<a href="#">
-						<img src="/img/banner-1.jpg" alt="bnner" id="banner1" />
+						<img src="/img/banner-1.jpg" alt="bnner" id="banner1"  />
 						</a>
 						<div className="container-fluid">
 							<div className="banner-des">
@@ -65,7 +69,10 @@ export default function Home() {
 			<ListCategory/>
 			<ProductList/>
 			<Customhtml1/>
-			
+			<PromoBlock/>
+			<SpecialProduct/>
+			<Testimonials/>
+			<Footer/>
 		</div>
 	);
 }

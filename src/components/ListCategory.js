@@ -40,7 +40,7 @@ const ListCategory =(props) =>{
                         className="products product-carousal owl-theme"  
                         loop={false}
                         autoplayHoverPause={true}
-                        autoHeight={true}
+                        autoheight="true"
                         nav  
                         >
                         { ListCategory && Category.length ? Category.map((item, i) => {

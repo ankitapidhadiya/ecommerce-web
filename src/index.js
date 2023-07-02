@@ -6,6 +6,11 @@ import './style/productlist.css';
 import './style/home.css';
 import './style/customhtml1.css';
 import './style/listcategory.css';
+import './style/promoblock.css';
+import './style/specialproduct.css';
+import './style/testimonial.css';
+import './style/footer.css';
+import './style/shop.css';
 //import 'bootstrap/dist/css/bootstrap.css';
 
 import App from './App';
