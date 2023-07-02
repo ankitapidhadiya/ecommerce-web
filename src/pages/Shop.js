@@ -3,8 +3,12 @@ import Footer from '../components/common/Footer';
 import { ReactSVG } from "react";
 import { faFontAwesome } from "@fortawesome/free-solid-svg-icons";
 //import ProductList from '../components/common/ProductList';
+// import ProductDetail from "../components/common/ProductDetail";
+import products from '../data/AllProducts';
 import ProductDetail from "../components/common/ProductDetail";
+
 export default function Shop() {
+	console.log('products', products.allProducts)
 	return (
 		<div className="inner-page">
 			<div className="breadcrumbs">
@@ -56,18 +60,21 @@ export default function Shop() {
 							<div className="col-lg-6 col-xs-12">
 								<div className="gridlist-toggle">
 									<span className="grid-view" >
-									<i class="bi bi-grid"></i>
-									<i class="fa fa-th-large" aria-hidden="true"></i>
+									<i className="bi bi-grid"></i>
+									<i className="fa fa-th-large" aria-hidden="true"></i>
 
-									<i class="grid-icon"></i></span>
+									<i className="grid-icon"></i></span>
 								</div>
 							</div>
-							<div className="col-lg-6 col-xs-12">
-								
-							</div>
 						</div>
-						<ProductDetail/>
-										</div>	
+						{ products.allProducts && products.allProducts.length ? products.allProducts.map((item, i) => {
+							return(
+								<div className="col-lg-3 col-xs-12" key={i}>
+									<ProductDetail productDetail={item} />
+								</div>
+							)
+						}) : <></>}
+						</div>	
 				</div>				
 			</div>
 	<Footer/>
