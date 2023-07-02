@@ -1,127 +1,18 @@
-import OwlCarousel from 'react-owl-carousel';  
+// import OwlCarousel from 'react-owl-carousel';  
 import { useState } from 'react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css'; 
+import products from '../../data/AllProducts';
 import Productdetail from './ProductDetail';
-import ProductDetail from './ProductDetail';
+import ProductCarousel from './ProductCarousel';
 
 const ProductList = (props) => {
  
-  // const [productList, setProductList, length] = useState([{
-  //   id:0,
-  //   image1: '/img/product/product-1.jpg',
-  //   image2: '/img/product/product-2.jpg',
-  //   title: 'Sweatshirt',
-  //   description: 'Lorem Ipsum',
-  //   price:'$33',
-  //   regularPrice:'$38',
-  //   discountPrice: '5%',
-  // }, {
-  //   id:1,
-  //   image1: '/img/product/product-3.jpg',
-  //   image2: '/img/product/product-4.jpg',
-  //   title: 'T-shirt',
-  //   description: 'Lorem Ipsum',
-  //   price: '$50',
-  //   regularPrice: '$55',
-  //   discountPrice: '10%',
-  // }, {
-  //   id:2,
-  //   image1: '/img/product/product-5.jpg',
-  //   image2: '/img/product/product-6.jpg',
-  //   title: 'Trench Coat',
-  //   description: 'Lorem Ipsum',
-  //   price: '$65',
-  //   regularPrice: '$75',
-  //   discountPrice: '15%'
-  // },{
-  //     id:3,
-  //     image1: '/img/product/product-7.jpg',
-  //     image2: '/img/product/product-8.jpg',
-  //     title: 'Pullover Shirt',
-  //     description: 'Lorem Ipsum',
-  //     price: '$50',
-  //     regularPrice: '$55',
-  //     discountPrice: '10%'
-  //   },{
-  //     id:4,
-  //     image1: '/img/product/product-9.jpg',
-  //     image2: '/img/product/product-10.jpg',
-  //     title: 'Black T-Shirt',
-  //     description: 'Lorem Ipsum',
-  //     price: '$50',
-  //     regularPrice: '$55',
-  //     discountPrice: '10%'
-  //   }])
-  //   const [productList1, setProductList1] = useState([{
-  //       id:5,
-  //       image1: '/img/product/product-11.jpg',
-  //       image2: '/img/product/product-12.jpg',
-  //       title: 'white hoodie-Shirt',
-  //       description: 'Lorem Ipsum',
-  //       price: '$32',
-  //       regularPrice: '$38',
-  //       discountPrice: '10%'
-  //     },{
-  //       id:6,
-  //       image1: '/img/product/product-13.jpg',
-  //       image2: '/img/product/product-14.jpg',
-  //       title: 'Millon Otla',
-  //       description: 'Lorem Ipsum',
-  //       price: '$38',
-  //       regularPrice: '$40',
-  //       discountPrice: '5%'
-  //     },{
-  //         id:7,
-  //         image1: '/img/product/product-24.jpg',
-  //         image2: '/img/product/product-25.jpg',
-  //         title: 'Black-Shirt',
-  //         description: 'Lorem Ipsum',
-  //         price: '$38',
-  //         regularPrice: '$40',
-  //         discountPrice: '5%' 
-  //       }])
-    
-  //     const [productList2, setProductList2] = useState([{
-  //       id:7,
-  //       image1: '/img/product/product-15.jpg',
-  //       image2: '/img/product/product-16.jpg',
-  //       title: 'Black T-Shirt',
-  //       description: 'Lorem Ipsum',
-  //       price: '$32',
-  //       regularPrice: '$38',
-  //       discountPrice: '10%'
-  //     },{
-  //       id:8,
-  //       image1: '/img/product/product-19.jpg',
-  //       image2: '/img/product/product-18.jpg',
-  //       title: 'Black-Shirt',
-  //       description: 'Lorem Ipsum',
-  //       price: '$38',
-  //       regularPrice: '$40',
-  //       discountPrice: '5%'
-  //     },{
-  //       id:9,
-  //       image1: '/img/product/product-20.jpg',
-  //       image2: '/img/product/product-21.jpg',
-  //       title: 'Black-Shirt',
-  //       description: 'Lorem Ipsum',
-  //       price: '$38',
-  //       regularPrice: '$40',
-  //       discountPrice: '5%' 
-  //     },{
-  //       id:6,
-  //       image1: '/img/product/product-22.jpg',
-  //       image2: '/img/product/product-23.jpg',
-  //       title: 'Black-Shirt',
-  //       description: 'Lorem Ipsum',
-  //       price: '$38',
-  //       regularPrice: '$40',
-  //       discountPrice: '5%' 
-  //     }])
-      
+  const [productList, setProductList, length] = useState(products.productList)
+  const [productList1, setProductList1] = useState(products.productList1)
+  const [productList2, setProductList2] = useState(products.productList2)
       
   // const handleClickFn = () => {
   //   console.log('clciked')
@@ -146,14 +37,14 @@ const ProductList = (props) => {
                           <div className="row">
                           <div className="tab-content" id="myTabContent">
                             <div className="tab-pane fade show active"  id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabIndex="0">
-                              <OwlCarousel items={4}  
+                              {/* <OwlCarousel items={4}  
                                 className="products product-carousal owl-theme"  
                                 loop={false}
                                 autoplayHoverPause={true}
                                 nav  
-                                >   
+                                >    */}
                                 
-                                <Productdetail/>
+                                <ProductCarousel productList={productList} />
                                   {/* { productList && productList.length ? productList.map((item, i) => { */}
                                     {/* return ( */}
                                     {/* //   <article className='product-miniature col-xl-3' key={i}>
@@ -212,17 +103,17 @@ const ProductList = (props) => {
                                     
                                     )
                                   }) : <></>} */}
-                              </OwlCarousel>
+                              {/* </`OwlCarousel`> */}
                             </div>
                             <div className="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabIndex="1">
-                              <OwlCarousel items={4}  
+                              {/* <OwlCarousel items={4}  
                                 className="products product-carousal owl-theme"  
                                 loop={false}
                                 autoplayHoverPause={true}
                                 nav  
-                                > 
+                                >  */}
                                 
-                                <ProductDetail/>
+                                <ProductCarousel productList={productList1} />
                                   {/* { productList && productList1.length ? productList1.map((item, i) => {
 
                                   return (
@@ -281,15 +172,15 @@ const ProductList = (props) => {
                                       </article> 
                                     )
                                   }) : <></>} */}
-                              </OwlCarousel>
+                              {/* </OwlCarousel> */}
                               </div> 
                             <div className="tab-pane fade" id="latest-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabIndex="2">
-                            <OwlCarousel items={4}  
+                            {/* <OwlCarousel items={4}  
                                 className="products product-carousal owl-theme"  
                                 loop={false}
                                 autoplayHoverPause={true} 
                                 nav  
-                                > 
+                                >  */}
                                   {/* { productList && productList2.length ? productList2.map((item, i) => {
                                     return (
                                       <article className='product-miniature col-xl-3' key={i}>
@@ -347,8 +238,8 @@ const ProductList = (props) => {
                                       </article> 
                                     )
                                   }) : <></>}*/}
-                                  <ProductDetail/>
-                              </OwlCarousel> 
+                                  <ProductCarousel productList={productList2} />
+                              {/* </OwlCarousel>  */}
                             </div>
                           </div>
                         </div>
