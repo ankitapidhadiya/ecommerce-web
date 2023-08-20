@@ -1211,6 +1211,9 @@ input:focus { outline: none; }
     background-color: #f74040;
     color:#ffffff;
 }
+.collapse.in{
+  display: block;
+}
 .btn.show{
   background-color: transparent;
 }

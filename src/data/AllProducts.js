@@ -44,6 +44,42 @@ const products = {
         price: '$50',
         regularPrice: '$55',
         discountPrice: '10%'
+    },{
+      id:5,
+      image1: '/img/product/product-15.jpg',
+      image2: '/img/product/product-16.jpg',
+      title: 'Black T-Shirt',
+      description: 'Lorem Ipsum',
+      price: '$32',
+      regularPrice: '$38',
+      discountPrice: '10%'
+    },{
+      id:6,
+      image1: '/img/product/product-19.jpg',
+      image2: '/img/product/product-18.jpg',
+      title: 'Black-Shirt',
+      description: 'Lorem Ipsum',
+      price: '$38',
+      regularPrice: '$40',
+      discountPrice: '5%'
+    },{
+      id:7,
+      image1: '/img/product/product-20.jpg',
+      image2: '/img/product/product-21.jpg',
+      title: 'Black-Shirt',
+      description: 'Lorem Ipsum',
+      price: '$38',
+      regularPrice: '$40',
+      discountPrice: '5%' 
+    },{
+      id:8,
+      image1: '/img/product/product-22.jpg',
+      image2: '/img/product/product-23.jpg',
+      title: 'Black-Shirt',
+      description: 'Lorem Ipsum',
+      price: '$38',
+      regularPrice: '$40',
+      discountPrice: '5%' 
     }],
     productList : [{
         id:0,

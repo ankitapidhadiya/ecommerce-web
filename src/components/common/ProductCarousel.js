@@ -12,7 +12,7 @@ const ProductCarousel = (props) => {
             >
                 { props.productList && props.productList.length ? props.productList.map((item, i) => {
                     return(
-                        <article className='product-miniature col-xl-3' key={i}>
+                        <article className='product-miniature col-xl-3 clearfix' key={i}>
                             <ProductDetail productDetail={item} />
                         </article>
                     )

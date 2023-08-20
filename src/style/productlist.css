@@ -229,3 +229,9 @@ margin-top: 5px;
 .featured-product .product-tabs{
   padding: 0;
 }
+.product-miniature .product-item{
+  margin-bottom: 0;
+}
+.product-item{
+  margin-bottom: 30px;
+}

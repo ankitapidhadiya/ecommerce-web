@@ -261,4 +261,5 @@ li a {
   .btn:first-child:active,  .btn.show {
     background: none;
     color: #f74040;
+    border-color:#e5e5e5;
   }
