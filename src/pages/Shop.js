@@ -11,10 +11,23 @@ import userEvent from "@testing-library/user-event";
 
 export default function Shop() {
 	const [subMenuOpen, setSubMenuOpen] = useState(-1);
-	const [submenuClose, setSubMenuClose]= useState(0);
+	// const [submenuClose, setSubMenuClose]= useState(-1);
 	const toggleMenu = (x) => setSubMenuOpen(subMenuOpen === x ? -1 : x);
-	const toggleMenuClose = (y) => setSubMenuClose(subMenuOpen === y ? 0 : y)
+	// const toggleMenuClose = (y) => setSubMenuClose(subMenuOpen === y ? 0 : y)
 	console.log('products', products.allProducts)
+	function togglemenu1({ isLoggedIn }) {
+		return (
+		  <div>
+			{(() => {
+			  if (isLoggedIn) {
+				return <p>Welcome back!</p>;
+			  } else {
+				return <p>Please log in to continue.</p>;
+			  }
+			})()}
+		  </div>
+		);
+	  }
 	return (
 		<div className="inner-page">
 			<div className="breadcrumbs">
@@ -50,15 +63,10 @@ export default function Shop() {
 											<li data-depth="0">
 												<a href="#men">Men</a>
 												<div className="toggler-collapse collapsed" data-toggle="collapse" aria-expanded="false">
-												<Link to="#" onClick={() => toggleMenu(0)} >  <i className="fa fa-plus"></i>
-              
-													{/* <i className="fa fa-plus"></i>
-													<i className="fa fa-minus"></i> */}
-												
-												{/* <div className="collapse in" aria-expanded="true">
-													<div id="display-cat-block" className="menu-collapse"> */}
-														<ul id="category-sub-menu" class={`sub-menu ${subMenuOpen === 0 ? "is-open" : ""}`}>
-															
+													<Link to="#" onClick={() => toggleMenu(1)} > 
+														<ul id="category-sub-menu" class={`sub-menu ${subMenuOpen === 1 ? "is-open" : ""}`}>
+														<i className="fa fa-plus"></i>
+														<i className="fa fa-minus"></i>
 															<li data-depth="1">
 																<a href="#oxford shirt">Oxford shirt</a>
 															</li>
@@ -68,11 +76,31 @@ export default function Shop() {
 															<li data-depth="1">
 																<a href="#classic nameic shirt">classic shirt</a>
 															</li>
-														</ul></Link>
-													{/* </div>
-												</div> */}
+														</ul>
+													</Link>
 												</div>
 											</li>
+											<li data-depth="0">
+												<a href="#women">Women</a>
+												<div className="toggler-collapse collapsed" data-toggle="collapse" aria-expanded="false">
+													<Link to="#" onClick={() => toggleMenu(1)} > 
+														<ul id="category-sub-menu" class={`sub-menu ${subMenuOpen === 1 ? "is-open" : ""}`}>
+														<i className="fa fa-plus"></i>
+														<i className="fa fa-minus"></i>
+															<li data-depth="1">
+																<a href="#Military shirt">Military shirt</a>
+															</li>
+															<li data-depth="1">
+																<a href="#Henley shirt">Henley shirt</a>
+															</li>
+															<li data-depth="1">
+																<a href="#v-neck shirt">V-neck shirt</a>
+															</li>
+														</ul>
+													</Link>
+												</div>
+											</li>
+										
 											{/* <li data-depth="0">
 												<a href="#men">woMen</a>
 												<div className="toggler-collapse collapsed" data-toggle="collapse" aria-expanded="false">
