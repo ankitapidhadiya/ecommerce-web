@@ -330,8 +330,8 @@ export default function Shop() {
 								</div>
 								<div className="col-md-6 pagination-right">
 									<ul  className="pagelist clearfix">
-										<li className="currentpage">
-											<a href="page1">1</a>
+										<li className="currentpage active">
+											<a href="page1" className="active">1</a>
 										</li>
 										<li className="currentpage">
 											<a href="page2">2</a>
