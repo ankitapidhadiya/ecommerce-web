@@ -126,7 +126,16 @@ const products = {
         price: '$50',
         regularPrice: '$55',
         discountPrice: '10%'
-    }],
+    },{
+      id:4,
+      image1: '/img/product/product-9.jpg',
+      image2: '/img/product/product-10.jpg',
+      title: 'Black T-Shirt',
+      description: 'Lorem Ipsum',
+      price: '$50',
+      regularPrice: '$55',
+      discountPrice: '10%'
+  }],
     productList1: [{
         id:5,
         image1: '/img/product/product-11.jpg',

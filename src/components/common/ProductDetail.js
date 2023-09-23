@@ -9,14 +9,16 @@ const ProductDetail = (props) => {
   return(
     <div className='product-item'>
       <div className='product-image-wrapper'>
-        <a href='#' className='product-thumbnail'>
+      <Link to={'/ProductDetails'} className=" innermost"id="innerpage" >
+                                                    
+                                                
           <span className='cover-image'>
             <img src={product.image1} alt="Sample Image" />
           </span>
           <span className='hover-image'>
             <img src={product.image2} alt="sample-image"/>
           </span>
-        </a> 
+       </Link>
         <ul className='product-flag'>
           <li className='product-flag-discount'>{product.discountPrice} </li>
           <li className='product-flag-new'>new</li>  

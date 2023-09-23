@@ -12,10 +12,10 @@ import Home from './pages/Home'
 import Shop from './pages/Shop'
 import Clothes from './pages/Clothes'
 import Formal from './pages/Formal'
+import ProductDetails from "./components/common/ProductDetails";
 import Signup from './pages/auth/Signup'
 import NotFound from './pages/NotFound'
 import WebLayout from './WebLayout'
-
 // function PrivateRoute({ component: Component, ...rest }) {
 //   const isLoggedIn = localStorage.getItem("auth_token")
 //   return (
@@ -58,7 +58,7 @@ function App(props) {
           <Route path="*" component={NotFound} /> */}
           <AppRoute exact path="/" layout={WebLayout} component={Home} />
           <AppRoute exact path="/shop" layout={WebLayout} component={Shop} />
-        </Switch>
+         </Switch>
       </div>
     </Router>
   );

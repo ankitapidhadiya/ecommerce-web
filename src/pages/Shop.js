@@ -1,33 +1,13 @@
 import React from "react";
-import Footer from '../components/common/Footer';	
-import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
-//import ProductList from '../components/common/ProductList';
-// import ProductDetail from "../components/common/ProductDetail";
+import Footer from '../components/common/Footer';
 import products from '../data/AllProducts';
 import ProductDetail from "../components/common/ProductDetail";
-import userEvent from "@testing-library/user-event";
+import Leftcolumn from "../components/Leftcolumn";
 
 export default function Shop() {
-	const [subMenuOpen, setSubMenuOpen] = useState(-1);
-	// const [submenuClose, setSubMenuClose]= useState(-1);
-	const toggleMenu = (x) => setSubMenuOpen(subMenuOpen === x ? -1 : x);
-	// const toggleMenuClose = (y) => setSubMenuClose(subMenuOpen === y ? 0 : y)
+	// const [subMenuOpen, setSubMenuOpen] = useState(-1);
+	// const toggleMenu = (x) => setSubMenuOpen(subMenuOpen === x ? -1 : x);
 	console.log('products', products.allProducts)
-	function togglemenu1({ isLoggedIn }) {
-		return (
-		  <div>
-			{(() => {
-			  if (isLoggedIn) {
-				return <p>Welcome back!</p>;
-			  } else {
-				return <p>Please log in to continue.</p>;
-			  }
-			})()}
-		  </div>
-		);
-	  }
 	return (
 		<div className="inner-page">
 			<div className="breadcrumbs">
@@ -52,216 +32,7 @@ export default function Shop() {
             <div id="product-category"  className="container-fluid">
 				<div className="row">
 					<div className="left-column col-xs-12 col-sm-4 col-md-3">
-						<div className="category-block  hidden-md-down">
-							<ul className="category-top-menu">
-								<li className="cat-title">
-									<a href="Shop">shop</a>
-								</li>
-								<li className="cate-sub">
-									<div id="categories-block" data-toggle="collapse">
-										<ul className="category-sub-menu">
-											<li data-depth="0">
-												<a href="#men">Men</a>
-												<div className="toggler-collapse collapsed" data-toggle="collapse" aria-expanded="false">
-													<Link to="#" onClick={() => toggleMenu(1)} > 
-														<ul id="category-sub-menu" class={`sub-menu ${subMenuOpen === 1 ? "is-open" : ""}`}>
-														<i className="fa fa-plus"></i>
-														<i className="fa fa-minus"></i>
-															<li data-depth="1">
-																<a href="#oxford shirt">Oxford shirt</a>
-															</li>
-															<li data-depth="1">
-																<a href="#polo shirt">Polo shirt</a>
-															</li>
-															<li data-depth="1">
-																<a href="#classic nameic shirt">classic shirt</a>
-															</li>
-														</ul>
-													</Link>
-												</div>
-											</li>
-											<li data-depth="0">
-												<a href="#women">Women</a>
-												<div className="toggler-collapse collapsed" data-toggle="collapse" aria-expanded="false">
-													<Link to="#" onClick={() => toggleMenu(1)} > 
-														<ul id="category-sub-menu" class={`sub-menu ${subMenuOpen === 1 ? "is-open" : ""}`}>
-														<i className="fa fa-plus"></i>
-														<i className="fa fa-minus"></i>
-															<li data-depth="1">
-																<a href="#Military shirt">Military shirt</a>
-															</li>
-															<li data-depth="1">
-																<a href="#Henley shirt">Henley shirt</a>
-															</li>
-															<li data-depth="1">
-																<a href="#v-neck shirt">V-neck shirt</a>
-															</li>
-														</ul>
-													</Link>
-												</div>
-											</li>
-										
-											{/* <li data-depth="0">
-												<a href="#men">woMen</a>
-												<div className="toggler-collapse collapsed" data-toggle="collapse" aria-expanded="false">
-													<i className="fa fa-plus"></i>
-													<i className="fa fa-minus"></i>
-												</div>
-												<div className="collapse in" aria-expanded="true">
-													<div id="display-cat-block" className="menu-collapse">
-														<ul className="category-sub-menu">
-															<li data-depth="1">
-																<a href="#Military shirt">Military shirt</a>
-															</li>
-															<li data-depth="1">
-																<a href="#Henley shirt">Henley shirt</a>
-															</li>
-															<li data-depth="1">
-																<a href="#v-neck shirt">V-neck shirt</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</li>
-											<li data-depth="0">
-												<a href="#men">Kids</a>
-												<div className="toggler-collapse collapsed" data-toggle="collapse" aria-expanded="false">
-													<i className="fa fa-plus"></i>
-													<i className="fa fa-minus"></i>
-												</div>
-												<div className="collapse in" aria-expanded="true">
-													<div id="display-cat-block" className="menu-collapse">
-														<ul className="category-sub-menu">
-															<li data-depth="1">
-																<a href="#oxford shirt">Batwing shirt</a>
-															</li>
-															<li data-depth="1">
-																<a href="#polo shirt">Striped shirt</a>
-															</li>
-															<li data-depth="1">
-																<a href="#classic nameic shirt">Ruffled shirt</a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</li> */}
-		
-										</ul>
-									</div> 
-								</li>
-							</ul>
-							
-						</div>
-						<div className="filter-block  hidden-md-down">
-							<h5 className="filter-title">Filter By</h5>
-							<div className="filter-inner">
-								<div className="filter-cat">
-									<h5 className="search_filter_title">Categories</h5>
-									<ul id="search-cat">
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#formal">Formal</a>
-										</li>
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#Casual">Casual</a>
-										</li>
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#cotton">Cotton</a>
-										</li>
-									</ul>
-								</div>
-								<div className="filter-cat">
-									<h5 className="search_filter_title">Size</h5>
-									<ul id="search-cat">
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#s">S</a>
-										</li>
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#m">M</a>
-										</li>
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#l">L</a>
-										</li>
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#xl">XL</a>
-										</li>
-									</ul>
-								</div>
-								<div className="filter-cat">
-									<h5 className="search_filter_title">Color</h5>
-									<ul id="search-cat">
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#white">White</a>
-										</li>
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#black">Black</a>
-										</li>
-									</ul>
-								</div>
-								<div className="filter-cat">
-									<h5 className="search_filter_title">Composition</h5>
-									<ul id="search-cat">
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#ceramic">Ceramic</a>
-										</li>
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#polyester">Polyester</a>
-										</li>
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#cotton">Cotton</a>
-										</li>
-										<li>
-											<span className="checkbox">
-												<input type="checkbox"></input>
-											</span>
-											<a href="#silk">Silk</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						
-						</div>
-						<div className="bestseller hidden-md-down">
-							{/* <ProductDetail/> */}
-						</div>
-						<div className="bannerhtml">
-							<a href="banner"><img src="../img/bannerhtml.jpg" alt="banner-img"></img></a>
-						</div>
+						<Leftcolumn/>
 					</div>
 					
 					<div className="right-column col-lg-9 col-md-12 col-sm-12 col-xs-12">
@@ -317,7 +88,7 @@ export default function Shop() {
 						{ products.allProducts && products.allProducts.length ? products.allProducts.map((items, i) => {
 							return(
 								
-								<div className="col-lg-3 col-xs-12 " key={i}>
+								<div className="col-lg-3 col-xs-12 " key={i=1}>
 									<ProductDetail productDetail={items} />
 								</div>
 							)
