@@ -1,0 +1,6 @@
+.product-detail-inner .product-item .product-btn-wrapper.grid{
+    opacity: 1;
+    visibility: visible;
+    position: unset;
+    display: flex;
+}

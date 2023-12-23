@@ -58,6 +58,7 @@ function App(props) {
           <Route path="*" component={NotFound} /> */}
           <AppRoute exact path="/" layout={WebLayout} component={Home} />
           <AppRoute exact path="/shop" layout={WebLayout} component={Shop} />
+          <AppRoute exact path="/productdetails/:id" layout={WebLayout} component={ProductDetails}/>
          </Switch>
       </div>
     </Router>

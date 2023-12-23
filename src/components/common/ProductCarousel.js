@@ -1,7 +1,12 @@
 import ProductDetail from "./ProductDetail"
-import OwlCarousel from 'react-owl-carousel';  
+import OwlCarousel from 'react-owl-carousel'; 
+import products from '../../data/AllProducts'; 
+//import { Link ,useParams} from 'react-router-dom';
+import  product from '../../data/AllProducts';
 
 const ProductCarousel = (props) => {
+  console.log(products);
+     console.log(ProductCarousel);
     return(
         <div id="products">
             <OwlCarousel items={4}  
@@ -10,12 +15,13 @@ const ProductCarousel = (props) => {
             autoplayHoverPause={true}
             nav  
             >
-                { props.productList && props.productList.length ? props.productList.map((item, i) => {
+                { props.products && props.products.length ? props.products.map((item, i) => {
                     return(
                         <article className='product-miniature col-xl-3 clearfix' key={i}>
                             <ProductDetail productDetail={item} />
                         </article>
                     )
+                    console.log(product);
                 }) : <></>}
             </OwlCarousel>
         </div>

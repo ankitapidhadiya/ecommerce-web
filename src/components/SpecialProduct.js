@@ -8,8 +8,8 @@ const SpecialProduct = (props)=>{
     const [productList, setProductList, length] = useState([
     {
         id:0,
-        image1: '/img/product/product-1.jpg',
-        image2: '/img/product/product-5.jpg',
+        image1: '/img/product/product-12.jpg',
+        image2: '/img/product/product-15.jpg',
         title: 'Black-Shirt',
         description: 'Lorem Ipsum',
         price: '$38',
@@ -17,8 +17,8 @@ const SpecialProduct = (props)=>{
         discountPrice: '5%' 
       }, {
         id:1,
-        image1: '/img/product/product-6.jpg',
-        image2: '/img/product/product-8.jpg',
+        image1: '/img/product/product-13.jpg',
+        image2: '/img/product/product-14.jpg',
         title: 'T-shirt',
         description: 'Lorem Ipsum',
         price: '$50',
@@ -26,8 +26,8 @@ const SpecialProduct = (props)=>{
         discountPrice: '10%',
       }, {
         id:2,
-        image1: '/img/product/product-9.jpg',
-        image2: '/img/product/product-11.jpg',
+        image1: '/img/product/product-16.jpg',
+        image2: '/img/product/product-17.jpg',
         title: 'Trench Coat',
         description: 'Lorem Ipsum',
         price: '$65',
@@ -35,8 +35,8 @@ const SpecialProduct = (props)=>{
         discountPrice: '15%'
       },{
           id:3,
-          image1: '/img/product/product-12.jpg',
-          image2: '/img/product/product-15.jpg',
+          image1: '/img/product/product-18.jpg',
+          image2: '/img/product/product-19.jpg',
           title: 'Pullover Shirt',
           description: 'Lorem Ipsum',
           price: '$50',
@@ -45,7 +45,7 @@ const SpecialProduct = (props)=>{
         },{
           id:4,
           image1: '/img/product/product-20.jpg',
-          image2: '/img/product/product-18.jpg',
+          image2: '/img/product/product-21.jpg',
           title: 'Black T-Shirt',
           description: 'Lorem Ipsum',
           price: '$50',
