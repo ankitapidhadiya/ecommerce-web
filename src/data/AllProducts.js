@@ -97,6 +97,7 @@ const products = [{
         price:'$33',
         regularPrice:'$38',
         discountPrice: '5%',
+        type:'bestseller',
       }, {
         id:10,
         image1: '/img/product/product-3.jpg',
