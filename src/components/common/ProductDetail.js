@@ -2,16 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import products from '../../data/AllProducts';
-//import item from './ProductCarousel';
+import item from './ProductCarousel';
 const ProductDetail = (props) => {
-const product = props.productDetail;
-  const handleClickFn = () => {
-    console.log(product);
-  }
+  const product = props.productDetail;
+  console.log(product);
+  
   return(
     <div className='product-item'>
       <div className='product-image-wrapper'>
-         <p className='demo'></p>
       <Link to={`/ProductDetails/${product.id}`} className=" innermost" id="innerpage"  >
           <span className='cover-image'>
             <img src={product.image1} alt="Sample Image" />

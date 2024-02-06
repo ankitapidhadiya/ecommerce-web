@@ -109,6 +109,14 @@ margin: 0 5px 5px 0;
     text-align: right;
     justify-content: end;
 }
+.page-item:not(:first-child) .page-link{
+    margin: 0;
+}
+ .page-link{
+    background: #222222;
+    color: #ffffff;
+    border-color: #222222;
+}
 .pagination li a{
    border-radius: 50%;
    background: #222222;
@@ -120,11 +128,24 @@ margin: 0 5px 5px 0;
    width: 36px;
    display: inline-block;
 }
+.page-item:last-child .page-link,
+.page-item:first-child .page-link{
+    border-radius: 100%;
+}
 .pagination li a:hover,
 .pagination  li a.active,
-.pagination  li a:active{
+.pagination  li a:active,
+.active>.page-link,
+.page-link:hover{
     background-color: #f74040;
     color: #ffffff;
+    border-color: #f74040;
+}
+.page-link:focus{
+    box-shadow: none;
+    z-index: 0;
+    color: #ffffff;
+    background-color: #f74040;
 }
 .pagination ul li{
     margin-right: 5px;

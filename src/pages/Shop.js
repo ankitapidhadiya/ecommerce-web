@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from '../components/common/Footer';
 import products from '../data/AllProducts';
 import ProductDetail from "../components/common/ProductDetail";
 import Leftcolumn from "../components/Leftcolumn";
+import id from "../data/AllProducts";
 
 export default function Shop() {
-	// const [subMenuOpen, setSubMenuOpen] = useState(-1);
-	// const toggleMenu = (x) => setSubMenuOpen(subMenuOpen === x ? -1 : x);
-	console.log('products', products.allProducts)
+	const [currentpage ,setcurrentpage]= useState(products.length);
+	const recordpage= 8;
+	const lindex= currentpage*recordpage;
+	const findex=lindex-recordpage;
+	const records= products.slice(findex,lindex);
+	const a=records.length==false;
+	const npage =Math.ceil(products.length/recordpage);
+	const num =[...Array(npage + 1).keys()].slice(1, 21);
+	console.log(records)
+	console.log(a);
 	return (
 		<div className="inner-page">
 			<div className="breadcrumbs">
@@ -85,7 +93,7 @@ export default function Shop() {
 							</div>
 						</div>
 						<div className="product-list-grid clearfix row">
-						{ products.allProducts && products.allProducts.length ? products.allProducts.map((items, i) => {
+						{ records && records.length ? records.map((items, i) => {
 							return(
 								
 								<div className="col-lg-3 col-xs-12 " key={i=1}>
@@ -97,19 +105,30 @@ export default function Shop() {
 						<div className="pagination">
 							<div className="row">
 								<div className="col-md-6 pagination-left">
-									Showing 1-12 of 19 items
+									Showing {findex}-{lindex} of 21 items
 								</div>
 								<div className="col-md-6 pagination-right">
 									<ul  className="pagelist clearfix">
-										<li className="currentpage active">
-											<a href="page1" className="active">1</a>
+										<li className="page-item active">
+											<a href="#" className="page-link" onClick={prepage}> {`<`} </a>
 										</li>
-										<li className="currentpage">
+										{
+										   num.map((n,i)=>(
+										     <li className={`page-item  ${currentpage ==n>0 ? 'active' :'' }`} key={i}>
+												<a href="#" className='page-link' onClick={()=>changecpage(n)}>{n}</a>
+											 </li>
+										   ))
+										   
+										}
+										<li className="page-item">
+											<a href="#" className="page-link" onClick={nextpage=={a} ? 'disabled':{a}}>{`>`}</a>
+										</li>
+										{/* <li className="currentpage">
 											<a href="page2">2</a>
 										</li>
 										<li className="next">
 											<a href="next"><i className="fa fa-angle-right"></i></a>
-										</li>
+										</li> */}
 									</ul>
 								</div>
 							</div>
@@ -119,5 +138,24 @@ export default function Shop() {
 			</div>
 	<Footer/>
 </div>
-	);
+)
+
+function prepage(){
+if(currentpage !==findex){
+	setcurrentpage(currentpage-1)
+}
+
+}
+function changecpage(id){
+	setcurrentpage(id);
+	
+
+}
+function nextpage(){
+	if(currentpage !==lindex){
+	setcurrentpage(currentpage + 1);
+}
+
+}
+
 }

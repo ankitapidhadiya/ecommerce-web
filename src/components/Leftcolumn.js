@@ -198,7 +198,7 @@ const Leftcolumn = (props) => {
                 <div className="bestseller hidden-md-down">
                     <h5 className="bestseller-title">BestSeller </h5>
                     <div className='bestseller-inner'>
-                        { products.productList && products.productList.length  ? products.productList.map((items, i) => {
+                        { products && products.length  ? products.map((items, i) => {
                                 
                                     return(
                                     <div className="best-seller" key={i}>

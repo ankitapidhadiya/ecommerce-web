@@ -12,8 +12,8 @@ const ProductDetails = (props) => {
     const params=useParams(product);
     console.log(params);
     var productitem={};
-    if(products && products.allProducts && products.allProducts.length && productList && products.productList && products.productList.length){
-     productitem=products.allProducts.find((item) => params.id==item.id);
+    if(products && products.length){
+     productitem=products.find((item) => params.id==item.id);
     console.log(productitem);
    
      }

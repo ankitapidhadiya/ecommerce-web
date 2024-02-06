@@ -19,9 +19,9 @@ const ProductCarousel = (props) => {
                     return(
                         <article className='product-miniature col-xl-3 clearfix' key={i}>
                             <ProductDetail productDetail={item} />
+                           
                         </article>
                     )
-                    console.log(product);
                 }) : <></>}
             </OwlCarousel>
         </div>
